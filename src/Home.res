@@ -11,12 +11,15 @@ module Styles = {
   })
 }
 
+let sayHello = _ => Js.log("hello")
+
 @react.component
 let make = () => {
   <>
     <Head> <title> {"Welcome"->React.string} </title> </Head>
     <div className=Styles.container>
       <p className=Styles.text> {"Welcome to ReScript React Starter Kit!"->React.string} </p>
+      <button onClick={sayHello(_)}> {"Hello2"->React.string} </button>
     </div>
   </>
 }
